@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveTune - Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-music"></i>
+            <h2>WaveTune</h2>
+        </div>
+
+        <nav>
+
+            <a href="#" class="active">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-compass"></i>
+                Discover
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-heart"></i>
+                Favorites
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-list"></i>
+                Playlist
+            </a>
+
+        </nav>
+
+    </aside>
+
+    
+
+    <main class="main">
+
+        <!-- Header -->
+
+        <header class="top-bar">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search songs...">
+            </div>
+
+            <button class="profile-btn">
+                <i class="fa-solid fa-user"></i>
+                Guest
+            </button>
+
+        </header>
+
+        
+
+        <section class="banner">
+
+            <div class="banner-text">
+
+                <h1>Enjoy Your Music</h1>
+
+                <p>
+                    Stream your favourite songs anytime with
+                    a clean and modern music player.
+                </p>
+
+                <button id="playAll">
+                    Play All
+                </button>
+
+            </div>
+
+        </section>
+
+        
+
+        <section class="playlist">
+
+            <h2>Trending Songs</h2>
+
+            <div class="song-list" id="songList">
+
+            
+
+                <div class="song-card"
+                    data-index="0">
+
+                    <img src="images/cover1.jpg">
+
+                    <div class="song-info">
+                        <h3>Dream Lights</h3>
+                        <p>Alan Walker</p>
+                    </div>
+
+                    <button class="play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                
+
+                <div class="song-card"
+                    data-index="1">
+
+                    <img src="images/cover2.jpg">
+
+                    <div class="song-info">
+                        <h3>Night Sky</h3>
+                        <p>Imagine Dragons</p>
+                    </div>
+
+                    <button class="play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                
+
+                <div class="song-card"
+                    data-index="2">
+
+                    <img src="images/cover3.jpg">
+
+                    <div class="song-info">
+                        <h3>Stay With Me</h3>
+                        <p>OneRepublic</p>
+                    </div>
+
+                    <button class="play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                
+
+                <div class="song-card"
+                    data-index="3">
+
+                    <img src="images/cover4.jpg">
+
+                    <div class="song-info">
+                        <h3>Feel Alive</h3>
+                        <p>Coldplay</p>
+                    </div>
+
+                    <button class="play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                
+
+                <div class="song-card"
+                    data-index="4">
+
+                    <img src="images/cover5.jpg">
+
+                    <div class="song-info">
+                        <h3>Golden Hour</h3>
+                        <p>The Chainsmokers</p>
+                    </div>
+
+                    <button class="play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+
+    <footer class="player">
+
+        <div class="current-song">
+
+            <img
+                src="images/cover1.jpg"
+                id="cover">
+
+            <div>
+
+                <h4 id="title">
+                    Dream Lights
+                </h4>
+
+                <p id="artist">
+                    Alan Walker
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="controls">
+
+            <button id="prev">
+                <i class="fa-solid fa-backward"></i>
+            </button>
+
+            <button id="play">
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+            <button id="next">
+                <i class="fa-solid fa-forward"></i>
+            </button>
+
+        </div>
+
+        <div class="progress">
+
+            <span id="currentTime">0:00</span>
+
+            <input
+                type="range"
+                id="progressBar"
+                value="0">
+
+            <span id="duration">0:00</span>
+
+        </div>
+
+        <div class="volume">
+
+            <i class="fa-solid fa-volume-high"></i>
+
+            <input
+                type="range"
+                id="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1">
+
+        </div>
+
+    </footer>
+
+    <!-- Audio -->
+
+    <audio id="audio"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
